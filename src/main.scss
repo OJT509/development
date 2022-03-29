@@ -1,3 +1,8 @@
-$primary: red;
-
 @import "~bootstrap/scss/bootstrap";
+@import "scss/abstracts/colors";
+@import "scss/abstracts/fonts";
+
+p {
+    font-size: $primary-font-size;
+    color: $primary;
+}
