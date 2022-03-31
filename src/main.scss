@@ -2,7 +2,44 @@
 @import "scss/abstracts/colors";
 @import "scss/abstracts/fonts";
 
-p {
-    font-size: $primary-font-size;
-    color: $primary;
+$border: top;
+
+@mixin center($bgcolor) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $bgcolor;
+}
+
+.webpack {
+    display: none;
+}
+
+.centered {
+    @include center(green);
+    @if $border == top {
+        border-top: solid blue 5px;
+    }
+}
+
+.button {
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    
+    &--danger {
+        @extend .button;
+        background-color: $primary;
+    }
+}
+
+a {
+    &[href^="https"] {
+        color: red;
+    }
+
+    &[href$=".uk"] {
+        color: green;
+        font-size: 22px;
+    }
 }

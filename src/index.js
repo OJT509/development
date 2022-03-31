@@ -5,6 +5,6 @@ import { ComponentService } from "./app/component.service";
 const alertService = new AlertService();
 const componentService = new ComponentService();
 const version = require("../package.json").version;
-run(alertService, componentService);
 
+run(alertService, componentService);
 document.getElementById("version").innerHTML = "Version " + version;
